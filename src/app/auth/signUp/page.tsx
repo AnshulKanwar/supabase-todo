@@ -32,7 +32,7 @@ export default function SignUp() {
       email,
       password,
       options: {
-        emailRedirectTo: `https://supabase-todo-sage.vercel.app/auth/callback`,
+        emailRedirectTo: `${location.origin}/auth/callback`,
       },
     });
 
