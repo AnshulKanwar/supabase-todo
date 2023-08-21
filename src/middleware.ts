@@ -18,3 +18,7 @@ export async function middleware(req: NextRequest) {
 
   return res;
 }
+
+export const config = {
+  matcher: ['/', '/auth/:path*']
+}

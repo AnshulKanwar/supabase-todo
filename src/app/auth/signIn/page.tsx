@@ -33,7 +33,7 @@ export default function SignIn() {
     }
 
     setLoading(false)
-    router.push("/");
+    router.refresh();
   };
 
   return (
@@ -58,7 +58,7 @@ export default function SignIn() {
         </Button>
       </form>
       <p className="text-zinc-500 mt-2">
-        Don&apos;t have an account?
+        Don&apos;t have an account?{" "}
         <Link href="/auth/signUp" className="text-emerald-500 hover:underline">
           Create one
         </Link>
