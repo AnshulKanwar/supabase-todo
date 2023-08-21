@@ -10,7 +10,7 @@ export default async function Home() {
   const { data: todos } = await supabase.from("todos").select();
 
   return (
-    <main className="max-w-lg mx-auto">
+    <main className="max-w-lg mx-auto mt-20">
       <AddTodo />
       <RealtimeTodos serverTodos={todos ?? []} />
     </main>

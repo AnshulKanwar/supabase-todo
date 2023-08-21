@@ -3,5 +3,5 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="mt-32">{children}</div>;
+  return <div className="mt-32 max-w-lg mx-auto">{children}</div>;
 }

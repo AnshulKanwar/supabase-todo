@@ -17,7 +17,7 @@ export default function Nav() {
         setIsSignedIn(false)
       }
     });
-  }, []);
+  }, [supabase]);
 
   return (
     <nav className="flex justify-between py-10">

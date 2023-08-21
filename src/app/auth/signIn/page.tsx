@@ -57,7 +57,7 @@ export default function SignIn() {
         </Button>
       </form>
       <p className="text-zinc-500 mt-2">
-        Don't have an account?{" "}
+        Don&apos;t have an account?
         <Link href="/auth/signUp" className="text-emerald-500 hover:underline">
           Create one
         </Link>
