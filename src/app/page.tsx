@@ -4,6 +4,8 @@ import { Database } from "@/database.types";
 import AddTodo from "@/components/addTodo";
 import RealtimeTodos from "@/components/realtime-todos";
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   const supabase = await createServerComponentClient<Database>({ cookies });
 
