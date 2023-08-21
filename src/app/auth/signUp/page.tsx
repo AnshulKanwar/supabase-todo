@@ -21,6 +21,7 @@ export default function SignUp() {
     e.preventDefault();
     setLoading(true);
     setIsError(false);
+    setMessage(null);
 
     if (password !== confirmPassword) {
       alert("Both passwords should match");
@@ -31,7 +32,7 @@ export default function SignUp() {
       email,
       password,
       options: {
-        emailRedirectTo: `${location.origin}/auth/callback`,
+        emailRedirectTo: `https://supabase-todo-sage.vercel.app/auth/callback`,
       },
     });
 
