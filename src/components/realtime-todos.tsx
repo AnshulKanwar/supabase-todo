@@ -37,6 +37,21 @@ export default function RealtimeTodos({
       .on(
         "postgres_changes",
         {
+          event: "UPDATE",
+          schema: "public",
+          table: "todos",
+        },
+        (payload) => {
+          setTodos((prevTodos) =>
+            prevTodos.map((todo) =>
+              todo.id === payload.old.id ? (payload.new as ITodo) : todo
+            )
+          );
+        }
+      )
+      .on(
+        "postgres_changes",
+        {
           event: "DELETE",
           schema: "public",
           table: "todos",
@@ -57,7 +72,7 @@ export default function RealtimeTodos({
   return (
     <div className="flex flex-col gap-3 mt-10">
       {todos!.map(({ id, title, is_complete }) => (
-        <Todo key={id} title={title} isComplete={is_complete} />
+        <Todo key={id} id={id} title={title} isComplete={is_complete} />
       ))}
     </div>
   );
